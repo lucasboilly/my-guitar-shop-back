@@ -17,21 +17,10 @@
       "required": true,
       "unique": true
     },
-    "availability": {
-      "type": "boolean",
-      "required": true,
-      "default": false
-    },
-    "Year": {
-      "type": "string"
-    },
     "brand": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::brand.brand"
-    },
-    "Body": {
-      "type": "string"
     },
     "Images": {
       "type": "media",
@@ -44,8 +33,11 @@
         "audios"
       ]
     },
-    "Micros": {
+    "url": {
       "type": "string"
+    },
+    "Availability": {
+      "type": "boolean"
     }
   }
 }

@@ -17,8 +17,15 @@
       "required": true,
       "unique": true
     },
-    "Country": {
-      "type": "string"
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

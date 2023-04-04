@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "ibanez_tm730s",
+  "info": {
+    "singularName": "ibanez-tm730",
+    "pluralName": "ibanez-tm730s",
+    "displayName": "Ibanez TM730",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "guitar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::guitar.guitar"
+    }
+  }
+}

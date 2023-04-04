@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <style>
+    img {
+        height: 100px;
+    }
     .guitar{
         margin: 12px;
         padding: 20px;
@@ -31,22 +34,19 @@
             .then(response => response.json())
             .then(data => {
                 data.data.forEach(guitar => {
-                const markup = `<p class="guitar">${guitar.attributes.name}</p>`;
+
+                const markup = `
+                    <div class="guitar">
+                        <img src="http://localhost:1337${guitar.attributes.Images.data[0].attributes.url}"/>
+                        <p>${guitar.attributes.brand.data.attributes.name}</p>
+                        <h3>${guitar.attributes.name}</h3>
+                    </div>`;
                 document.querySelector('div').insertAdjacentHTML('beforeend', markup);
-
-        
-                const img = new Image();
-                img.src = "http://localhost:1337/uploads/0144502506_gtr_frt_001_rr_78784fe7e2.jpg";
-
-                img.addEventListener('load', () => {
-                    document.body.appendChild(img);
-                });
+                
             });
         })
         .catch(error => console.error(error));
     </script>
-
 </body>
-
 
 </html>
